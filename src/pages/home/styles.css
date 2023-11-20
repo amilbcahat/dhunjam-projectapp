@@ -1,0 +1,108 @@
+.admin-dashboard {
+    font-family: 'Poppins', sans-serif;
+    color: #FFFFFF;
+    background-color: #030303;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .content {
+    width: 600px;
+    text-align: center;
+  }
+  
+  .title {
+    font-size: 32px;
+    margin-bottom: 50px;
+  }
+  
+  .question {
+    margin: 20px 0;
+    font-size: 16px;
+  }
+  
+  .radio-option {
+    margin: 0 10px;
+  }
+  
+  .input-custom-amount,
+  .input-amount {
+    width: 300px;
+    padding: 10px;
+    background-color: transparent;
+    border: 1px solid #FFFFFF;
+    border-radius: 5px;
+    color: #FFFFFF;
+    font-size: 16px;
+    margin: 10px 0;
+  }
+  
+  .amounts-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  .graph-container {
+    width: 600px;
+    height: 300px;
+    background-color: #222;
+    margin: 30px 0;
+    /* Add styles for your graph here */
+  }
+  
+  .save-button {
+    width: 600px;
+    padding: 10px;
+    background-color: #6741D9;
+    border: none;
+    border-radius: 5px;
+    color: #FFFFFF;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s;
+  }
+  
+  .save-button:hover {
+    border: 1px solid #F0C3F1;
+  }
+  
+  .graph-container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    width: 600px;
+    height: 300px;
+    background-color: #222;
+    margin: 30px 0;
+    position: relative;
+    padding: 10px;
+  }
+  
+  .graph-bar {
+    width: 40px;
+    background-color: #F0C3F1;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+  }
+  
+  .graph-label {
+    position: absolute;
+    top: -20px;
+    font-size: 12px;
+    color: #FFFFFF;
+  }
+  
+  .graph-value {
+    position: absolute;
+    bottom: -20px;
+    font-size: 12px;
+    color: #FFFFFF;
+  }
+  
