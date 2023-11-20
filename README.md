@@ -7,4 +7,4 @@ npm install
 npm run start 
 ```
 
-Thank you :) 
+## Thank you :) 
