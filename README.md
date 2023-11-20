@@ -1,4 +1,4 @@
-*Steps to start the web app :*
+# Steps to start the web app :
 
 ```
 git clone https://github.com/amilbcahat/dhunjam-projectapp
