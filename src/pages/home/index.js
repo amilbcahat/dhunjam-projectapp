@@ -150,23 +150,49 @@ function Home({ user }) {
           </span>
           <center>
             <div>
-              <input
-                type="radio"
-                name="charge"
-                value="yes"
-                defaultChecked={res?.charge_customers}
-                className="radio-input"
-                onClick={() => setchargeCust(true)}
-              />
+              {res?.charge_customers ? (
+                <input
+                  type="radio"
+                  name="charge"
+                  value="yes"
+                  defaultChecked={res?.charge_customers}
+                  className="radio-input"
+                  onClick={() => setchargeCust(true)}
+                />
+              ) : (
+                <input
+                  type="radio"
+                  name="charge"
+                  value="yes"
+                  defaultChecked={res?.charge_customers}
+                  className="radio-input"
+                  style={{ backgroundColor: "C2C2C2" }}
+                  onClick={() => setchargeCust(true)}
+                  disabled={true}
+                />
+              )}
               Yes &nbsp;
-              <input
-                type="radio"
-                name="charge"
-                value="no"
-                defaultChecked={!res?.charge_customers}
-                className="radio-input"
-                onClick={() => setchargeCust(false)}
-              />
+              {res?.charge_customers ? (
+                <input
+                  type="radio"
+                  name="charge"
+                  value="yes"
+                  defaultChecked={!res?.charge_customers}
+                  className="radio-input"
+                  onClick={() => setchargeCust(false)}
+                />
+              ) : (
+                <input
+                  type="radio"
+                  name="charge"
+                  value="yes"
+                  defaultChecked={!res?.charge_customers}
+                  className="radio-input"
+                  style={{ backgroundColor: "C2C2C2" }}
+                  onClick={() => setchargeCust(false)}
+                  disabled={true}
+                />
+              )}
               No
             </div>
           </center>
@@ -386,7 +412,7 @@ function Home({ user }) {
           </div>
         </div>
         <br></br>
-        &nbsp;
+
         <div>
           <div style={{ alignItems: "end" }}>
             <i class="fa fa-inr fa-4x"></i>
@@ -438,39 +464,15 @@ function Home({ user }) {
             marginLeft: "100px",
           }}
         >
-          {save && chargeCust ? (
-            <button
-              onClick={() => putDashboardDetails()}
-              style={{
-                width: "600px",
-                padding: "10px",
-                backgroundColor: "#6741D9",
-                border: "none",
-                borderRadius: "15px",
-                color: "#FFFFFF",
-                fontSize: "16px",
-                cursor: "pointer",
-              }}
-            >
-              Save
-            </button>
-          ) : (
-            <button
-              style={{
-                width: "600px",
-                padding: "10px",
-                backgroundColor: "#C2C2C2",
-                border: "none",
-                borderRadius: "15px",
-                color: "#FFFFFF",
-                fontSize: "16px",
-                cursor: "pointer",
-              }}
-              disabled={true}
-            >
-              Save
-            </button>
-          )}
+          <button
+            onClick={() => putDashboardDetails()}
+            className={`save-button ${
+              save && chargeCust ? "" : "save-button-disabled"
+            }`} // Use class here
+            disabled={!save}
+          >
+            Save
+          </button>
         </div>
       </div>
     </div>

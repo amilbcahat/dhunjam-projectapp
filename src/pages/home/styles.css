@@ -58,16 +58,23 @@
     padding: 10px;
     background-color: #6741D9;
     border: none;
-    border-radius: 5px;
+    border-radius: 15px;
     color: #FFFFFF;
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.2s, border-color 0.2s;
   }
   
-  .save-button:hover {
-    border: 1px solid #F0C3F1;
-  }
+  .save-button:hover,
+.save-button:active { /* active pseudo-class added */
+  border: 1px solid #F0C3F1;
+}
+
+/* Disabled save button styles */
+.save-button-disabled {
+  background-color: #C2C2C2;
+  cursor: not-allowed;
+}
   
   .graph-container {
     display: flex;
